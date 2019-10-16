@@ -3,15 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-jest": "^24.9.0",
+    "bootstrap": "^4.3.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "jest": "^24.9.0",
+    "prop-types": "latest",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-test-renderer": "^16.10.2",
+    "reactstrap": "^8.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "transform": {
+      "'^.+\\.js$'": "babel-jest"
+    },
+    "moduleDirectories": [ "/node_modules"],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "es6"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js"
   },
   "eslintConfig": {
     "extends": "react-app"
